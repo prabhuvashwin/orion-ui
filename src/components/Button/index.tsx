@@ -33,6 +33,16 @@ const StyledButton = styled.button<Omit<ButtonProps, 'label'>>`
 
   &:hover {
     opacity: 0.8;
+    ${({ primary }) => 
+      primary
+        ? css`
+            background-color: #ff69b4;
+          `
+        : css`
+            border: 1px solid #ff69b4;
+            color: #ff69b4;
+          `
+    };
   }
 
   &:active {
